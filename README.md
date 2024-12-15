@@ -4,16 +4,62 @@
 
 
 
-Start script that will handle the installation of dependencies for the ReSpeaker voice card project. 
+## Install the ReSpeaker voice 
+
+Just copy and paste these commands in your Raspberry Pi terminal:
+
+```bash
+# Clone the repository
+git clone https://github.com/respeaker/seeed-voicecard.git
+
+# Go into the directory
+cd seeed-voicecard
+
+# Run the installation script
+sudo ./install.sh
+
+# Reboot after installation
+sudo reboot
+```
+
+
+After reboot, verify the installation:
+```bash
+# Check if sound card is recognized
+arecord -l
+```
+
+
+## 2. Start script that will handle the installation of dependencies for the ReSpeaker voice card project. 
+
+
+```bash
+# Clone the repository
+git clone https://github.com/movatalk/rpizero2w.git
+
+# Go into the directory
+cd rpizero2w
+
+# Run the installation script
+sudo ./install.sh
+
+# Reboot after installation
+sudo reboot
+```
+
+
+
+OR
+
 
 1. Make the script executable:
 ```bash
-chmod +x setup_respeaker.sh
+chmod +x install.sh
 ```
 
 2. Run the script with sudo:
 ```bash
-sudo ./setup_respeaker.sh
+sudo ./install.sh
 ```
 
 The script will:

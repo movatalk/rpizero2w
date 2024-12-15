@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style>
+    @keyframes wavePulse {
+      0% { transform: translateX(-10px); opacity: 0.3; }
+      50% { transform: translateX(0px); opacity: 1; }
+      100% { transform: translateX(10px); opacity: 0.3; }
+    }
+    @keyframes circlePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes micGlow {
+      0% { filter: drop-shadow(0 0 2px #4A90E2); }
+      50% { filter: drop-shadow(0 0 8px #4A90E2); }
+      100% { filter: drop-shadow(0 0 2px #4A90E2); }
+    }
+    .wave { animation: wavePulse 2s infinite; }
+    .circle { animation: circlePulse 3s infinite; }
+    .mic { animation: micGlow 2s infinite; }
+  </style>
+  
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="160" fill="#4A90E2" class="circle"/>
+  
+  <!-- Sound Waves -->
+  <g transform="translate(200, 200)">
+    <path d="M30,-10 Q70,-10 100,-10" stroke="white" stroke-width="6" fill="none" class="wave"/>
+    <path d="M30,0 Q70,0 100,0" stroke="white" stroke-width="6" fill="none" class="wave" style="animation-delay: 0.2s"/>
+    <path d="M30,10 Q70,10 100,10" stroke="white" stroke-width="6" fill="none" class="wave" style="animation-delay: 0.4s"/>
+  </g>
+  
+  <!-- Microphone Icon -->
+  <g transform="translate(160, 160)" class="mic">
+    <rect x="0" y="0" width="80" height="120" rx="40" fill="white"/>
+    <path d="M40,-20 L40,160 M0,160 L80,160" stroke="white" stroke-width="12" fill="none"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="420" text-anchor="middle" fill="#4A90E2" font-family="Arial" font-weight="bold" font-size="36">MovaTalk</text>
+  <text x="200" y="450" text-anchor="middle" fill="#666" font-family="Arial" font-size="20">Cloud Assistant</text>
+</svg>

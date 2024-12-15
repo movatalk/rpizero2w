@@ -3,6 +3,12 @@
 ![movatalk.svg](movatalk.svg)
 
 + [Download sample-wav-files-sample3.wav](https://toolsfairy.com/audio-test/sample-wav-files#)
++ [http://www2.cs.uic.edu/~i101/SoundFiles/taunt.wav](http://www2.cs.uic.edu/~i101/SoundFiles/taunt.wav)
+
+```bash
+wget http://www2.cs.uic.edu/~i101/SoundFiles/taunt.wav
+curl http://www2.cs.uic.edu/~i101/SoundFiles/taunt.wav -o test.wav
+```
 
 ## 1. Install the ReSpeaker voice 
 

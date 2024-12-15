@@ -4,7 +4,7 @@
 
 
 
-## Install the ReSpeaker voice 
+## 1. Install the ReSpeaker voice 
 
 Just copy and paste these commands in your Raspberry Pi terminal:
 

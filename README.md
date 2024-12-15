@@ -52,12 +52,12 @@ sudo reboot
 OR
 
 
-1. Make the script executable:
+### 1. Make the script executable:
 ```bash
 chmod +x install.sh
 ```
 
-2. Run the script with sudo:
+### 2. Run the script with sudo:
 ```bash
 sudo ./install.sh
 ```
@@ -76,4 +76,19 @@ After the script completes successfully, you'll need to reboot your Raspberry Pi
 sudo reboot
 ```
 
-Would you like me to modify anything in the script or explain any part in more detail?
+
+## 3. Test
+
+[respeaker/seeed-voicecard: 2 Mic Hat, 4 Mic Array, 6-Mic Circular Array Kit, and 4-Mic Linear Array Kit for Raspberry Pi](https://github.com/respeaker/seeed-voicecard)
+
+### Coherence
+Estimate the magnitude squared coherence using Welch’s method. [![4-mics-linear-array-kit coherence](https://user-images.githubusercontent.com/3901856/37277486-beb1dd96-261f-11e8-898b-84405bfc7cea.png)](https://user-images.githubusercontent.com/3901856/37277486-beb1dd96-261f-11e8-898b-84405bfc7cea.png)  
+Note: 'CO 1-2' means the coherence between channel 1 and channel 2.
+
+# How to get the coherence of the captured audio(a.wav for example).
+sudo apt install python-numpy python-scipy python-matplotlib
+python tools/coherence.py a.wav
+
+# Requirement of the input audio file:
+- format: WAV(Microsoft) signed 16-bit PCM
+- channels: >=2
